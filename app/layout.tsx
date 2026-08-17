@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -26,7 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         lang="en"
         className="dark">
     <body
-      className={`${geistSans.variable}${geistMono.variable} antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
     {children}
      </body>
